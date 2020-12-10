@@ -46,5 +46,15 @@ switch (MONTH) {
   default:
     console.log('Ese no es un mes');
 }
+
+if(MONTH == (1||3||5||7||8||10||12)){
+    console.log('Este mes tiene 31 días')
+}else if (MONTH == (4||6||9||11)){
+    console.log('Este mes tiene 30 días')
+}else if (MONTH == 2){
+    console.log('Este mes puede tener 28 o 29 días');
+}else console.log('Este no es un mes válido');
+
+
 console.log('Fin del Ejercicio 5')
 alert('Fin del Ejercicio 5')
