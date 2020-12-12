@@ -16,7 +16,9 @@ function isPalindrome(phrase){
         pal_check = pal_check.concat(pal_no_space[i])
     }
     if (pal_no_space === pal_check)
-        console.log(`Son iguales`);
+        console.log(`Es palíndromo`)
+    else
+        console.log(`No es palíndromo`)
 }
 
 function getDataType (par1, par2){
