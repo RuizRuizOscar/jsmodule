@@ -33,9 +33,10 @@ function getDataType (par1, par2){
  * -> Poppy tiene 14 años caninos
  */
 
-function calculateDogAge(age){
+function calculateDogAge(name, age){
     // console.log(`El perro tiene ${age*7} años caninos`)
-    let res = age*7
+    let res = "El perro "+name+" tiene "+age*7+" años caninos"
+    console.log(res);
     return res
 }
 
