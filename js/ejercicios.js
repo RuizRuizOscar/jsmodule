@@ -1,25 +1,4 @@
-function add(a,b){
-    return a+b
-}
-
-const addArrow = (a,b) =>{
-    return a+b
-}
-
-// Ejemplo
-const result = addArrow(2,3)
-console.log(result);
-
 function printTablas(tablas){
-    const num = tablas
-    for(let i=0; i<num.length; i++){
-        for(let j=0; j<=10;j++){
-            console.log(`${num[i]} x ${j} = ${ num[i] * j }`)
-        }
-    }
-}
-
-const printTablasArrow = (tablas) => {
     const num = tablas
     for(let i=0; i<num.length; i++){
         for(let j=0; j<=10;j++){
@@ -42,27 +21,10 @@ function isPalindrome(phrase){
         console.log(`No es palíndromo`)
 }
 
-const isPalindromeArrow = (phrase) => {
-    const pal_original = phrase
-    let pal_check = ''
-    let pal_no_space = ''
-    pal_no_space = pal_original.replace(/ /g, "");
-    for(let i=pal_no_space.length-1; i>=0 ; i--){
-        pal_check = pal_check.concat(pal_no_space[i])
-    }
-    if (pal_no_space === pal_check)
-        console.log(`Es palíndromo`)
-    else
-        console.log(`No es palíndromo`)
-}
-
 function getDataType (par1, par2){
     console.log(par1+' es de tipo '+ typeof par1 + ' y ' + par2 + ' es de tipo ' + typeof par2)
 }
 
-const getDataTypeArrow  = (par1, par2) => {
-    return par1+' es de tipo '+ typeof par1 + ' y ' + par2 + ' es de tipo ' + typeof par2
-}
 /**
  * Escribir una función que calcule la edad de un perro en años caninos.
  * La función debe recibir el nombre y la edad del perro en años humanos
@@ -72,10 +34,6 @@ const getDataTypeArrow  = (par1, par2) => {
  */
 
 function calculateDogAge(name, age){
-    return "El perro "+name+" tiene "+age*7+" años caninos"
-}
-
-const calculateDogAgeArrow = (name,age) => {
     return "El perro "+name+" tiene "+age*7+" años caninos"
 }
 
@@ -91,15 +49,7 @@ function calcCircleArea(radius){
     return Math.pow(radius,2)*Math.PI
 }
 
-const calcCircleAreaArrow = (radius) => {
-    return Math.pow(radius,2)*Math.PI
-}
-
 function calcCircleCircunference(radius){
-    return 2*radius*Math.PI
-}
-
-const calcCircleCircunferenceArrow = (radius) => {
     return 2*radius*Math.PI
 }
 
@@ -120,16 +70,6 @@ function temperatureConverter(temp=100,char="C"){
       } else console.log(`La temperatura debe ser dada como 'C' o 'F'`)
 }
 
-const temperatureConverterArrow = (temp=100,char="C") => {
-    if (char === "C") {
-        // console.log(`${temp}° Celsius equivalen a ${(temp*9/5)+32}° Fahrenheit`)
-        return (temp*9/5)+32
-      } else if (char === "F") {
-        // console.log(`${temp}° Fahrenheit equivalen a ${(temp-32)*5/9}° Celsius`)
-        return (temp-32)*5/9
-      } else console.log(`La temperatura debe ser dada como 'C' o 'F'`)
-}
-
 /*
  * Escribir una funcion que calcule el factorial de un número
  * getFactorial(10)
@@ -140,13 +80,5 @@ function getFactorial(fact){
     for(let i=fact-1; i>0; i--){
         res = res * i
     }
-    return res
-}
-
-const getFactorial = (fact) => {
-    let res = fact
-    for(let i=fact-1; i>0; i--){
-        res = res * i
-    }
-    return res
+return res
 }
