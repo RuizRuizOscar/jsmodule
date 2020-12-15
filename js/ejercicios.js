@@ -34,10 +34,7 @@ function getDataType (par1, par2){
  */
 
 function calculateDogAge(name, age){
-    // console.log(`El perro tiene ${age*7} años caninos`)
-    let res = "El perro "+name+" tiene "+age*7+" años caninos"
-    console.log(res);
-    return res
+    return "El perro "+name+" tiene "+age*7+" años caninos"
 }
 
 /**
@@ -49,15 +46,12 @@ function calculateDogAge(name, age){
 
 function calcCircleArea(radius){
     // console.log(`El área del círculo es ${Math.pow(radius,2)*Math.PI} y la circunferencia es de ${2*radius*Math.PI}`)
-    let res = Math.pow(radius,2)*Math.PI
-    return res
+    return Math.pow(radius,2)*Math.PI
 }
 
 function calcCircleCircunference(radius){
-    let res = 2*radius*Math.PI
-    return res
+    return 2*radius*Math.PI
 }
-
 
 /**
  * Crear una función que convierta los grados celsius en fahrenheit y viceversa
@@ -69,12 +63,10 @@ function calcCircleCircunference(radius){
 function temperatureConverter(temp=100,char="C"){
     if (char === "C") {
         // console.log(`${temp}° Celsius equivalen a ${(temp*9/5)+32}° Fahrenheit`)
-        let res = (temp*9/5)+32
-        return res
+        return (temp*9/5)+32
       } else if (char === "F") {
         // console.log(`${temp}° Fahrenheit equivalen a ${(temp-32)*5/9}° Celsius`)
-        let res = (temp-32)*5/9
-        return res
+        return (temp-32)*5/9
       } else console.log(`La temperatura debe ser dada como 'C' o 'F'`)
 }
 
@@ -88,6 +80,5 @@ function getFactorial(fact){
     for(let i=fact-1; i>0; i--){
         res = res * i
     }
-    // console.log(`El factorial de ${fact} es ${res}`);
 return res
 }
