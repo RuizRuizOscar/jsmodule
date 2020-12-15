@@ -75,9 +75,17 @@ function calculateDogAge(name, age){
     return "El perro "+name+" tiene "+age*7+" años caninos"
 }
 
-const calculateDogAgeArrow = (name,age) => {
+const calculateDogAgeArrow1 = (name,age) => {
     return "El perro "+name+" tiene "+age*7+" años caninos"
 }
+
+const calculateDogAgeArrow2 = (name,age) => {
+    const dogYears = "El perro "+name+" tiene "+age*7+" años caninos"
+    return dogYears
+}
+
+const calculateDogAgeArrow3 = (name,age) =>  "El perro "+name+" tiene "+age*7+" años caninos"
+
 
 /**
  * Crear una función que calcule el area y la circunferencia de un circulo
