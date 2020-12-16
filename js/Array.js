@@ -25,3 +25,24 @@ for (let i=0;i < array.length;i++){
         console.log(`${tableNumber} x ${n} = ${tableNumber * n}`)
     }
 }
+
+const arrayCitys = ['cdmx', 'Monterrey', 'guadalajara']
+
+arrayCitys.forEach(function(currentElement, index, arrayOriginal)){
+    //sentencias
+    console.log(index, currentElement, arrayOriginal)
+}
+
+arrayCitys.forEach(function(currentElement) {
+    //sentencias
+    if(currentElement.startsWith('c') || currentElement.startsWith('C')){
+        console.log(currentElement)
+    }
+})
+
+arrayCitys.forEach( currentElement => {
+    //sentencias
+    if(currentElement.startsWith('c') || currentElement.startsWith('C') ) {
+        console.log(currentElement)
+    }
+})
