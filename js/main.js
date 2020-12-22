@@ -1,3 +1,3 @@
-console.log('Hi Koders')
+// console.log('Hi Koders')
 
 //alert('Mensaje de alerta')
