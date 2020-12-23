@@ -50,10 +50,10 @@ const add_R_Elements = (selector, numberElements, arrNames) => {
     document.querySelector(''+selector).innerHTML = listKoders
 }
 
-const kodersArr = ['ale', 'oscar', 'ruben', 'brian']
+const kodersArr = ['ale', 'oscar', 'ruben', 'brian', 'Antonio', 'armando', 'Apolonio', 'Brenda', 'bella', 'Bollo', 'oswaldo', 'Onosio']
 
 const filterKoders = letter => {
-    let filtrados = kodersArr.filter((koder) => {
+    let filtrados = kodersArr.filter(koder => {
         return koder.toLowerCase().startsWith( letter.toLowerCase())
     })
     addElements('#lista', filtrados.length, filtrados)
@@ -61,13 +61,6 @@ const filterKoders = letter => {
 
 // addElements('#lista', 3, kodersArr)
 
-document.getElementById('orden').value
-// onchange() lo tiene que disparar el selector
-// document.getElementById ('orden').value
-//funcion
-//metodo
-//innerHTML
-//lo tiene que disparar el selector
 
 
 

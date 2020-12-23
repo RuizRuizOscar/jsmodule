@@ -13,10 +13,10 @@
     <button onclick="filterKoders('o')">O</button>
     <button onclick="filterKoders('r')">R</button>
 
-    <select name ="" id="orden">
+    <select name ="" id="orden" onchange="orderKoders()">
         <option value="" selected>Seleccionar</option>
-        <option value="a" ></option>
-        <option value="d" ></option>
+        <option value="a">Ascendente</option>
+        <option value="d">Descendente</option>
     </select>
 
 
@@ -24,15 +24,9 @@
 
     </ul>
 
-
-
-
-
-
-
-
     <script src="js/main.js">    </script>
     <script src="js/inner.js">    </script>
+    <script src="js/homework.js">    </script>
     
     <!-- <script>
         console.log('hola') //no es lo mejor
