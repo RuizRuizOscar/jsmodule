@@ -12,6 +12,16 @@ const orderKoders = () => {
     }
 }
 
+const populateSelectAZ = (selector) => {
+    let listaAZ = '<option value="" selected>Seleccionar</option>'
+    for(let i=0; i<26; i++){
+        listaAZ += `<option value="${String.fromCharCode(65+i)}">${String.fromCharCode(65+i)}</option>`
+    }
+    document.querySelector(''+selector).innerHTML = listaAZ
+}
+
+populateSelectAZ('#escogeAZ')
+
 // onchange() lo tiene que disparar el selector
 // document.getElementById ('orden').value
 //funcion
