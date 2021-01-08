@@ -52,12 +52,13 @@ const add_R_Elements = (selector, numberElements, arrNames) => {
 
 const kodersArr = ['ale', 'oscar', 'ruben', 'brian', 'Antonio', 'armando', 'Apolonio', 'Brenda', 'bella', 'Bollo', 'oswaldo', 'Onosio']
 
-const filterKoders = letter => {
-    let filtrados = kodersArr.filter(koder => {
-        return koder.toLowerCase().startsWith( letter.toLowerCase())
-    })
-    addElements('#lista', filtrados.length, filtrados)
-}
+// const filterKoders = (letter, arrayToFilter = kodersArr) => {
+//     let filtrados = arrayToFilter.filter((koder) => {
+//         return koder //.toLowerCase().startsWith( letter.toLowerCase())
+//     })
+//     console.log(filtrados);
+//     addElements('#lista', filtrados.length, filtrados)
+// }
 
 // addElements('#lista', 3, kodersArr)
 

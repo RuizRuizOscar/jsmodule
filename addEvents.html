@@ -8,28 +8,24 @@
 <body>
     <!-- <h1>Hola Koders</h1> -->
 
-    <button onclick="addElements('#lista', 10, kodersArr)">Todos</button>
-    <button onclick="filterKoders('a')">A</button>
-    <button onclick="filterKoders('o')">O</button>
-    <button onclick="filterKoders('r')">R</button>
+    <button id="showAll">Todos</button>  
+                                        <!-- onclick="addElements('#lista', 10, kodersArr)" -->
 
-    <select name ="" id="orden" onchange="orderKoders()">
+    <select name ="" id="orden">
+                                        <!-- onchange="orderKoders()" -->
         <option value="" selected>Seleccionar</option>
         <option value="a">Ascendente</option>
         <option value="d">Descendente</option>
     </select>
 
-    <select name ="" id="escogeAZ" onchange="populateSelectAZ('escogeAZ')" >
+    <select name ="" id="escogeAZ">     
+                                        <!-- onchange="populateSelectAZ('escogeAZ')"  -->
         <!-- <option value="" selected>Seleccionar</option> -->
     </select>
 
-
     <ul id="lista">
-
     </ul>
-
-
-    
+  
     <!-- <form action="">
 
         <input type="text" id="email">
