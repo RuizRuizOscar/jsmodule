@@ -49,13 +49,13 @@ const printUsers2 = (selector, arrData) => {
 
 // loadUsers()
 
-document.getElementById('getusers').addEventListener('click', function(){
-    getData('https://jsonplaceholder.typicode.com/users', printUsers, '.list__users')
-})
+// document.getElementById('getusers').addEventListener('click', function(){
+//     getData('https://jsonplaceholder.typicode.com/users', printUsers, '.list__users')
+// })
 
-document.getElementById('getposts').addEventListener('click', function(){
-    getData('https://jsonplaceholder.typicode.com/posts', printPosts, '.list__posts')
-})
+// document.getElementById('getposts').addEventListener('click', function(){
+//     getData('https://jsonplaceholder.typicode.com/posts', printPosts, '.list__posts')
+// })
 
 console.log("El search es: "+ window.location.search);
 ///////////////////////////////////////////////////////////////////////////////
@@ -181,14 +181,26 @@ const showResponse = (response) => {
     console.log(response)
 }
 
-requestAjax(
-    'https://koders1gpython-default-rtdb.firebaseio.com/oscar/users/.json', //https://koders1gpython-default-rtdb.firebaseio.com/.json
-    showResponse,
-    'POST', 
-    {
-        lastname: "Vega",
-        name: "Gus",
-        urlPhoto: "https://loremflickr.com/320/240/person"
-    }
-)
+// requestAjax(
+//     'https://koders1gpython-default-rtdb.firebaseio.com/oscar/users/.json', //https://koders1gpython-default-rtdb.firebaseio.com/.json
+//     showResponse,
+//     'POST', 
+//     {
+//         lastname: "Vega",
+//         name: "Gus",
+//         urlPhoto: "https://loremflickr.com/320/240/person"
+//     }
+// )
 
+document.getElementById('guardar').addEventListener('click', function(){
+    console.log('guardar');
+    console.log(document.getElementById("lastname"));
+    // getData('https://jsonplaceholder.typicode.com/users', printUsers, '.list__users')
+    let temp = {
+        lastname: document.querySelector("#lastname").value,
+        name: document.querySelector("#name").value,
+        urlPhoto: document.querySelector("#url_photo").value
+    }
+    requestAjax('https://koders1gpython-default-rtdb.firebaseio.com/oscar/users/.json',showResponse,'POST',temp)
+    
+})

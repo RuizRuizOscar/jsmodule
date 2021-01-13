@@ -10,12 +10,17 @@
 <body>
     
     <form action="" >
-        <input type="text" id="name" placeholder="Nombre">
-        <input type="text" id="lastname" placeholder="Apellido">
-        <input type="text" id="url_photo" placeholder="Agrega una imagen de usuario">
-        <button>Guardar</button>
+        <label for="name">Nombre</label>
+        <input type="text" id="name" placeholder="Nombre"><br>
+        <label for="lastname">Apellido</label>
+        <input type="text" id="lastname" placeholder="Apellido"><br>
+        <label for="url_photo">URL de foto</label>
+        <input type="text" id="url_photo" placeholder="Agrega una imagen de usuario" value="https://picsum.photos/420/320?image=0"><br>
+        
+        <button type="button" id="guardar">Guardar</button>
     </form>
-
+    <script src="js/main.js">    </script>
+    <script src="js/crud-xhr.js">    </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
 </body>
 </html>
