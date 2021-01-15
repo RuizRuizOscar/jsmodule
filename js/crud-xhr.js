@@ -192,15 +192,78 @@ const showResponse = (response) => {
 //     }
 // )
 
-document.getElementById('guardar').addEventListener('click', function(){
-    console.log('guardar');
-    console.log(document.getElementById("lastname"));
-    // getData('https://jsonplaceholder.typicode.com/users', printUsers, '.list__users')
-    let temp = {
-        lastname: document.querySelector("#lastname").value,
-        name: document.querySelector("#name").value,
-        urlPhoto: document.querySelector("#url_photo").value
+// INICIO TAREA HOMEWORK para el 12/01/2021
+
+let btn_guardar_form = document.querySelector('.btn_guardar_form')
+if(btn_guardar_form) {
+    document.getElementById('guardar').addEventListener('click', function(){
+        console.log('guardar');
+        console.log(document.getElementById("lastname"));
+        // getData('https://jsonplaceholder.typicode.com/users', printUsers, '.list__users')
+        let temp = {
+            lastname: document.querySelector("#lastname").value,
+            name: document.querySelector("#name").value,
+            urlPhoto: document.querySelector("#url_photo").value
+        }
+        requestAjax('https://koders1gpython-default-rtdb.firebaseio.com/oscar/users/.json',showResponse,'POST',temp)
+        
+    })
+}
+
+// FIN TAREA HOMEWORK para el 12/01/2021
+
+const printUser = (arrData) => {
+    if(arrData !== null) {
+
+        document.querySelector('#card__user').innerHTML = `
+            <img src="${arrData.urlPhoto}" class="mb-4 rounded-circle img__user__profile" >
+            <h5 class="card-title name__user">${arrData.name}</h5>
+            <p class="card-text email__user">${arrData.lastname}</p>
+        `
+    } else {
+        document.querySelector('#card__user').innerHTML = `
+            <p class="card-text ">El usuario no existe</p>
+        `
     }
-    requestAjax('https://koders1gpython-default-rtdb.firebaseio.com/oscar/users/.json',showResponse,'POST',temp)
-    
-})
+}
+
+if(window.location.pathname === '/update-user.html'){
+    let url = new URLSearchParams(location.search)
+    let id = url.get('id')
+    console.log("id es:"+id);
+    requestAjax(
+    `https://koders1gpython-default-rtdb.firebaseio.com/jorge/users/${id}.json`,
+    printUser,
+    'GET')    
+}
+
+let btn_update_form = document.querySelector('.btn_update_form')
+if(btn_update_form) {
+    // get data user
+    btn_update_form.addEventListener('click', () => {
+        console.log('actualizando')
+        requestAjax('https://koders1gpython-default-rtdb.firebaseio.com/oscar/users/.json',showResponse,'GET',{})
+        let name = document.querySelector('#name__input').value
+        let lastName = document.querySelector('#lastname__input').value
+        let urlPhoto = document.querySelector('#photo__input').value
+        // validacion
+        if(name === '' || lastName === '' || urlPhoto === '') {
+            document.getElementById('alert__form').classList.remove('d-none')
+            setTimeout(()=> {
+                document.getElementById('alert__form').classList.add('d-none')
+            }, 3000)
+        } else {
+            let userToCreate = {
+                lastname: lastName,
+                urlPhoto: urlPhoto,
+                name: name,
+            }
+            requestAjax(
+                'https://koders1gpython-default-rtdb.firebaseio.com/jorge/users/.json',
+                redirectToUsers,
+                'POST',
+                userToCreate
+            )
+        }
+    })
+}
